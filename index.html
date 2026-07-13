@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A fun and colorful Flappy Bird game with smooth animations">
+    <title>Flappy Bird</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Game Canvas -->
+        <canvas id="gameCanvas"></canvas>
+        
+        <!-- Start Screen -->
+        <div id="startScreen" class="screen">
+            <div class="screen-content">
+                <h1 class="game-title">
+                    <span class="title-flappy">Flappy</span>
+                    <span class="title-bird">Bird</span>
+                </h1>
+                <p class="game-subtitle">Click or tap to fly!</p>
+                <button id="startBtn" class="game-btn">
+                    <span>Start Game</span>
+                    <div class="btn-shine"></div>
+                </button>
+                <div class="instructions">
+                    <div class="instruction-item">
+                        <div class="instruction-icon">🖱️</div>
+                        <p>Click to jump</p>
+                    </div>
+                    <div class="instruction-item">
+                        <div class="instruction-icon">🚫</div>
+                        <p>Avoid pipes</p>
+                    </div>
+                    <div class="instruction-item">
+                        <div class="instruction-icon">⭐</div>
+                        <p>Score points</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Game Over Screen -->
+        <div id="gameOverScreen" class="screen hidden">
+            <div class="screen-content">
+                <h2 class="game-over-title">Game Over!</h2>
+                <div class="score-container">
+                    <div class="score-box">
+                        <p class="score-label">Score</p>
+                        <p id="finalScore" class="score-value">0</p>
+                    </div>
+                    <div class="score-box">
+                        <p class="score-label">Best</p>
+                        <p id="bestScore" class="score-value">0</p>
+                    </div>
+                </div>
+                <button id="restartBtn" class="game-btn">
+                    <span>Play Again</span>
+                    <div class="btn-shine"></div>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Score Display (during game) -->
+        <div id="scoreDisplay" class="score-display hidden">
+            <div class="current-score">0</div>
+        </div>
+    </div>
+    
+    <script src="game.js"></script>
+</body>
+</html>
